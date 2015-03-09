@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+    body,
+    html,
+    #allmap {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: "微软雅黑";
+    }
+    #l-map {
+        height: 300px;
+        width: 100%;
+    }
+    #r-result {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8iPBLiCFtTvGiQZIrDFYN1Nl"></script>
+    <title>本地搜索的数据接口</title>
+</head>
+
+<body>
+    <div id="l-map"></div>
+    <div id="r-result"></div>
+</body>
+
+</html>
+<script type="text/javascript">
+// 百度地图API功能
+var map = new BMap.Map("l-map");
+map.centerAndZoom("上海");
+// 聚合数据 百度地图 中国POI
+// var tags = ["餐饮","汽车服务","地产小区","公司企业","宾馆","金融","交通设施","教育","生活服务","旅游景点","名称标注类","购物","休闲娱乐","行政地标","政府机构","医疗"]
+// 聚合数据 谷歌地图 中国POI
+// var tags = ["住宿服务","体育休闲服务","公共设施","公司企业","医疗保健服务","商务住宅","地名地址信息","摩托车服务","政府机构及社会团体","汽车服务","汽车维修","汽车销售","生活服务","科教文化服务","购物服务","道路附属设施","金融保险服务","风景名胜","餐饮服务"]
+var tags = ["公园", "美食", "宾馆", "购物", "汽车服务", "生活服务", "结婚", "丽人", "金融", "休闲娱乐", "运动健身", "医疗", "旅游景点", "教育", "培训机构", "交通设施", "房地产", "自然地物", "行政区划", "政府机构", "公司企业", "门址", "道路", "交通线"]
+var tag = "生活服务"
+var options = {
+    pageCapacity: 20,
+    onSearchComplete: function(results) {
+        if (results.getPageIndex() < results.getNumPages()-1) {
+            local.gotoPage(results.getPageIndex()+1);
+        }
+        // console.log(results.getCurrentNumPois());   //返回当前页的结果数
+        // console.log(results.getNumPois());  //返回总结果数
+        // console.log(results.getNumPages()); //返回总页数
+        // console.log(results.getPageIndex());    //返回页数序号
+        // 判断状态是否正确
+        if (local.getStatus() == BMAP_STATUS_SUCCESS) {
+            var s = [];
+            for (var i = 0; i < results.getCurrentNumPois(); i++) {
+                s.push(results.getPoi(i).title + ", " + results.getPoi(i).address);
+                // console.log(results.getPoi(i));
+                var poiObj = {};
+                poiObj.keyword = tag;
+                poiObj.title = results.getPoi(i).title.toString();
+                poiObj.latitude = results.getPoi(i).point.lat;
+                poiObj.longitude = results.getPoi(i).point.lng;
+                poiObj.url = results.getPoi(i).url;
+                poiObj.address = results.getPoi(i).address;
+                poiObj.city = results.getPoi(i).city;
+                poiObj.phoneNumber = results.getPoi(i).phoneNumber;
+                poiObj.postcode = results.getPoi(i).postcode;
+                poiObj.type = results.getPoi(i).type;
+                poiObj.isAccurate = results.getPoi(i).isAccurate;
+                poiObj.province = results.getPoi(i).province;
+                if (results.getPoi(i).tags) {
+                    poiObj.tags = results.getPoi(i).tags.join();
+                } else {
+                    poiObj.tags = results.getPoi(i).tags;
+                }
+                poiObj.detailUrl = results.getPoi(i).detailUrl;
+
+                // poiJson = JSON.stringify(poiObj);
+                // poiJson = JSON.stringify(eval('(' + poiJson + ')'));
+                // poiJson = eval(JSON.stringify(poiObj));
+                // console.log(poiJson);
+                $.ajax({
+                    url: "insert",
+                    type: "post",
+                    // datatype: "json",
+                    data: poiObj,
+                    timeout: 30000,
+                    success: function(data, textStatus) {
+                        // console.log("ajax success");
+                        console.log(data);
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown){
+                        console.log("fail");
+                        console.log("Error:Ajax_Content_Load " + errorThrown);
+                        console.log("XMLHttpRequest.status: " + XMLHttpRequest.status);
+                        console.log("XMLHttpRequest.readyState: " + XMLHttpRequest.readyState);
+                        console.log("textStatus: " + textStatus);
+                    }
+                });
+            }
+            document.getElementById("r-result").innerHTML = s.join("<br/>");
+        }
+    }
+};
+var local = new BMap.LocalSearch("上海", options);
+// for (var i=0; i < tags.length; i++) {
+//     var keyword = tags[i];
+//     local.search(tags[i]);
+// }
+local.search(tag);
+
+</script>

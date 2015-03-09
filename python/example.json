@@ -1,0 +1,627 @@
+{
+    "status": 0,
+    "result": {
+        "location": {
+            "lng": 116.32298703399,
+            "lat": 39.983424051248
+        },
+        "formatted_address": "北京市海淀区中关村大街27号1101-08室",
+        "business": "中关村,人民大学,苏州街",
+        "addressComponent": {
+            "city": "北京市",
+            "country": "中国",
+            "direction": "附近",
+            "distance": "7",
+            "district": "海淀区",
+            "province": "北京市",
+            "street": "中关村大街",
+            "street_number": "27号1101-08室",
+            "country_code": 0
+        },
+        "pois": [{
+            "addr": "海淀区中关村北大街27号",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "25",
+            "name": "中关村大厦",
+            "poiType": "房地产",
+            "point": {
+                "x": 116.32285606105,
+                "y": 39.983568897877
+            },
+            "tel": "",
+            "uid": "06d2dffdaef1b7ef88f15d04",
+            "zip": ""
+        }, {
+            "addr": "中关村大街29",
+            "cp": "NavInfo",
+            "direction": "北",
+            "distance": "62",
+            "name": "海淀医院激光整形美容部",
+            "poiType": "医疗",
+            "point": {
+                "x": 116.32317046798,
+                "y": 39.983016046485
+            },
+            "tel": "",
+            "uid": "b1c556e81f27cb71b4265502",
+            "zip": ""
+        }, {
+            "addr": "中关村大街27号中关村大厦1层",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "1",
+            "name": "中国人民财产保险中关村营业部",
+            "poiType": "金融",
+            "point": {
+                "x": 116.32298182382,
+                "y": 39.983416864194
+            },
+            "tel": "",
+            "uid": "060f5e53137d20d7081cc779",
+            "zip": ""
+        }, {
+            "addr": "北京市海淀区",
+            "cp": "NavInfo",
+            "direction": "东北",
+            "distance": "58",
+            "name": "北京市海淀医院-输血科",
+            "poiType": "医疗",
+            "point": {
+                "x": 116.322685383,
+                "y": 39.983092063819
+            },
+            "tel": "",
+            "uid": "cf405905b6d82eb9b55f1e89",
+            "zip": ""
+        }, {
+            "addr": "北京市海淀区中关村大街27号中关村大厦二层",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "0",
+            "name": "眉州东坡酒楼(中关村店)",
+            "poiType": "美食",
+            "point": {
+                "x": 116.32298182382,
+                "y": 39.983423774823
+            },
+            "tel": "",
+            "uid": "2c0bd6c57dbdd3b342ab9a8c",
+            "zip": ""
+        }, {
+            "addr": "北京市海淀区中关村大街29号（海淀黄庄路口）",
+            "cp": "NavInfo",
+            "direction": "东北",
+            "distance": "223",
+            "name": "海淀医院",
+            "poiType": "医疗",
+            "point": {
+                "x": 116.32199368776,
+                "y": 39.982083099537
+            },
+            "tel": "",
+            "uid": "fa01e9371a040053774ff1ca",
+            "zip": ""
+        }, {
+            "addr": "北京市海淀区中关村大街28号",
+            "cp": "NavInfo",
+            "direction": "西北",
+            "distance": "229",
+            "name": "海淀剧院",
+            "poiType": "休闲娱乐",
+            "point": {
+                "x": 116.32476945179,
+                "y": 39.982622137118
+            },
+            "tel": "",
+            "uid": "edd64ce1a6d799913ee231b3",
+            "zip": ""
+        }, {
+            "addr": "海淀黄庄地铁站旁",
+            "cp": "NavInfo",
+            "direction": "西北",
+            "distance": "375",
+            "name": "中发电子市场(中关村大街)",
+            "poiType": "购物",
+            "point": {
+                "x": 116.32529945204,
+                "y": 39.981537146849
+            },
+            "tel": "",
+            "uid": "69130523db34c811725e8047",
+            "zip": ""
+        }, {
+            "addr": "北京市海淀区知春路128号",
+            "cp": "NavInfo",
+            "direction": "西北",
+            "distance": "434",
+            "name": "泛亚大厦",
+            "poiType": "房地产",
+            "point": {
+                "x": 116.32600013033,
+                "y": 39.981516414381
+            },
+            "tel": "",
+            "uid": "d24e48ebb9991cc9afee7ade",
+            "zip": ""
+        }, {
+            "addr": "中关村大街28-1号海淀文化艺术大厦A座",
+            "cp": "NavInfo",
+            "direction": "西北",
+            "distance": "311",
+            "name": "北京市海淀区博物馆",
+            "poiType": "旅游景点",
+            "point": {
+                "x": 116.32543419786,
+                "y": 39.982373351075
+            },
+            "tel": "",
+            "uid": "5b25f446a72b99ea112935ad",
+            "zip": ""
+        }],
+        "poiRegions": [],
+        "sematic_description": "中关村大厦附近25米",
+        "cityCode": 131
+    }
+}
+
+{
+    "status": 0,
+    "result": {
+        "location": {
+            "lng": 101.61524479501,
+            "lat": 26.602810428814
+        },
+        "formatted_address": "四川省攀枝花市西区苏铁中路876号",
+        "business": "",
+        "addressComponent": {
+            "city": "攀枝花市",
+            "country": "中国",
+            "direction": "附近",
+            "distance": "47",
+            "district": "西区",
+            "province": "四川省",
+            "street": "苏铁中路",
+            "street_number": "876号",
+            "country_code": 0
+        },
+        "pois": [{
+            "addr": "攀枝花市西区",
+            "cp": "NavInfo",
+            "direction": "西北",
+            "distance": "91",
+            "name": "玉泉旅社",
+            "poiType": "酒店",
+            "point": {
+                "x": 101.61598688519,
+                "y": 26.602484246787
+            },
+            "tel": "",
+            "uid": "91095fe389394aa88c55ec32",
+            "zip": ""
+        }, {
+            "addr": "东区苏铁中路823号",
+            "cp": "NavInfo",
+            "direction": "北",
+            "distance": "63",
+            "name": "苏铁诊所",
+            "poiType": "医疗",
+            "point": {
+                "x": 101.61542993578,
+                "y": 26.602322730209
+            },
+            "tel": "",
+            "uid": "117024b07522fed22902e125",
+            "zip": ""
+        }, {
+            "addr": "攀枝花市西区",
+            "cp": "NavInfo",
+            "direction": "东",
+            "distance": "226",
+            "name": "动力站立交桥",
+            "poiType": "交通设施",
+            "point": {
+                "x": 101.6132650195,
+                "y": 26.602387336868
+            },
+            "tel": "",
+            "uid": "6ff626a923dea569a1a934f8",
+            "zip": ""
+        }, {
+            "addr": "苏铁中路845",
+            "cp": "NavInfo",
+            "direction": "东北",
+            "distance": "112",
+            "name": "矸石电厂社区",
+            "poiType": "房地产",
+            "point": {
+                "x": 101.61472925748,
+                "y": 26.602031999788
+            },
+            "tel": "",
+            "uid": "9605b2adb8b4d1731fe999a4",
+            "zip": ""
+        }, {
+            "addr": "苏铁中路",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "212",
+            "name": "攀枝花市公安局西区公安分局交警大队车管所",
+            "poiType": "政府机构",
+            "point": {
+                "x": 101.61353451115,
+                "y": 26.60357447766
+            },
+            "tel": "",
+            "uid": "d4213be4f8c1912532f71df6",
+            "zip": ""
+        }, {
+            "addr": "春禾路6",
+            "cp": "NavInfo",
+            "direction": "东",
+            "distance": "175",
+            "name": "宝鼎馨苑",
+            "poiType": "房地产",
+            "point": {
+                "x": 101.61371417225,
+                "y": 26.603138386571
+            },
+            "tel": "",
+            "uid": "ce382de86ad82f3625d2bb8e",
+            "zip": ""
+        }, {
+            "addr": "陶家渡东路88",
+            "cp": "NavInfo",
+            "direction": "东",
+            "distance": "186",
+            "name": "叁叁超市",
+            "poiType": "购物",
+            "point": {
+                "x": 101.61357942643,
+                "y": 26.602613459884
+            },
+            "tel": "",
+            "uid": "f4460918e4d5576bb11e361c",
+            "zip": ""
+        }, {
+            "addr": "陶家渡东路78",
+            "cp": "NavInfo",
+            "direction": "东",
+            "distance": "178",
+            "name": "康乐诊所",
+            "poiType": "医疗",
+            "point": {
+                "x": 101.61365129087,
+                "y": 26.602637687323
+            },
+            "tel": "",
+            "uid": "5b25f446cb98ed971029351f",
+            "zip": ""
+        }, {
+            "addr": "春禾路28",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "225",
+            "name": "零零发鱼府",
+            "poiType": "美食",
+            "point": {
+                "x": 101.61349857893,
+                "y": 26.603727916717
+            },
+            "tel": "",
+            "uid": "15d031aaa4d528436c476037",
+            "zip": ""
+        }, {
+            "addr": "陶家渡东路与310省道交叉口西区卫生局附近",
+            "cp": "NavInfo",
+            "direction": "西",
+            "distance": "460",
+            "name": "河石坝加油站",
+            "poiType": "交通设施",
+            "point": {
+                "x": 101.61913095448,
+                "y": 26.604083248473
+            },
+            "tel": "",
+            "uid": "3fa5e1797964d2270869d969",
+            "zip": ""
+        }],
+        "poiRegions": [],
+        "sematic_description": "玉泉旅社西北91米",
+        "cityCode": 81
+    }
+}
+
+
+{
+    "status": 0,
+    "result": {
+        "location": {
+            "lng": 114.03743962885,
+            "lat": 22.539742871413
+        },
+        "formatted_address": "广东省深圳市福田区泰然四路29",
+        "business": "车公庙,沙头,香蜜湖",
+        "addressComponent": {
+            "city": "深圳市",
+            "country": "中国",
+            "direction": "附近",
+            "distance": "12",
+            "district": "福田区",
+            "province": "广东省",
+            "street": "泰然四路",
+            "street_number": "29",
+            "country_code": 0
+        },
+        "pois": [{
+            "addr": "福田滨河路与香蜜湖路交汇处天安数码城内",
+            "cp": "NavInfo",
+            "direction": "西",
+            "distance": "63",
+            "name": "创新科技广场1期",
+            "poiType": "房地产",
+            "point": {
+                "x": 114.03800699861,
+                "y": 22.539725179784
+            },
+            "tel": "",
+            "uid": "a734e975657330f06140a90e",
+            "zip": ""
+        }, {
+            "addr": "泰然四路25号",
+            "cp": "NavInfo",
+            "direction": "西南",
+            "distance": "85",
+            "name": "创新科技广场1期B座",
+            "poiType": "房地产",
+            "point": {
+                "x": 114.03807886305,
+                "y": 22.54014243458
+            },
+            "tel": "",
+            "uid": "428eb68b50b3f3c629fc48b2",
+            "zip": ""
+        }, {
+            "addr": "福田区泰然四路29号",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "37",
+            "name": "创新科技广场1期A座",
+            "poiType": "房地产",
+            "point": {
+                "x": 114.03735123558,
+                "y": 22.539441445794
+            },
+            "tel": "",
+            "uid": "faea569ccf640f956f47603e",
+            "zip": ""
+        }, {
+            "addr": "深圳市福田区泰然五路福田天安科技创业园A座1层A103室",
+            "cp": "NavInfo",
+            "direction": "东",
+            "distance": "96",
+            "name": "深圳麟通汽车租赁有限公司",
+            "poiType": "汽车服务",
+            "point": {
+                "x": 114.03663259118,
+                "y": 22.539441445794
+            },
+            "tel": "",
+            "uid": "002a87a9ed9a25dc32870a53",
+            "zip": ""
+        }, {
+            "addr": "深圳福田区泰然四路25号天安数码城创新科技广场1期B座1",
+            "cp": "NavInfo",
+            "direction": "西",
+            "distance": "96",
+            "name": "可颂坊(天安店)",
+            "poiType": "美食",
+            "point": {
+                "x": 114.03829445637,
+                "y": 22.539858701457
+            },
+            "tel": "",
+            "uid": "c879fa01902a5653c809f09f",
+            "zip": ""
+        }, {
+            "addr": "深圳市福田区泰然五路兴业银行天安支行对面",
+            "cp": "NavInfo",
+            "direction": "东",
+            "distance": "96",
+            "name": "福田天安科技创业园A座",
+            "poiType": "房地产",
+            "point": {
+                "x": 114.03663259118,
+                "y": 22.539441445794
+            },
+            "tel": "",
+            "uid": "fa7da3e8938fe66242d63e0d",
+            "zip": ""
+        }, {
+            "addr": "泰然四路29号创新科技广场1期A座4层",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "15",
+            "name": "深圳市福田区环境技术研究所",
+            "poiType": "教育培训",
+            "point": {
+                "x": 114.03737818475,
+                "y": 22.539625038443
+            },
+            "tel": "",
+            "uid": "cfca5191f69efd1b7ec876ba",
+            "zip": ""
+        }, {
+            "addr": "深圳市福田区泰然四路29号创新科技广场一期A座19层",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "12",
+            "name": "歌力思",
+            "poiType": "公司企业",
+            "point": {
+                "x": 114.03736021864,
+                "y": 22.539666764011
+            },
+            "tel": "",
+            "uid": "8b648e7ce6d912b0e50738e3",
+            "zip": ""
+        }, {
+            "addr": "深圳市福田区",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "15",
+            "name": "ITS'iB服装店",
+            "poiType": "购物",
+            "point": {
+                "x": 114.03753089669,
+                "y": 22.539650073785
+            },
+            "tel": "",
+            "uid": "0a34f7e2e730ac1336b06c3a",
+            "zip": ""
+        }, {
+            "addr": "深圳市福田区泰然四路29号创新科技广场一期A座18层A180",
+            "cp": "NavInfo",
+            "direction": "附近",
+            "distance": "15",
+            "name": "深圳市桑海通投资有限公司",
+            "poiType": "金融",
+            "point": {
+                "x": 114.03737818475,
+                "y": 22.539625038443
+            },
+            "tel": "",
+            "uid": "4ed58dc9f5a721ce2a11d1c3",
+            "zip": ""
+        }],
+        "poiRegions": [],
+        "sematic_description": "创新科技广场1期西63米",
+        "cityCode": 340
+    }
+}
+
+
+{
+    "status": 0,
+    "result": {
+        "location": {
+            "lng": 120.87013900852,
+            "lat": 31.114049842507
+        },
+        "formatted_address": "上海市青浦区陈新路",
+        "business": "周庄",
+        "addressComponent": {
+            "city": "上海市",
+            "country": "中国",
+            "direction": "",
+            "distance": "",
+            "district": "青浦区",
+            "province": "上海市",
+            "street": "陈新路",
+            "street_number": "",
+            "country_code": 0
+        },
+        "pois": [{
+            "addr": "苏州昆山市周庄富贵园40号楼",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "986",
+            "name": "周庄的驿站",
+            "poiType": "酒店",
+            "point": {
+                "x": 120.86287414237,
+                "y": 31.118416646154
+            },
+            "tel": "",
+            "uid": "46e113a9bd508c4b3904b10b",
+            "zip": ""
+        }, {
+            "addr": "江苏省苏州市昆山 - 周庄镇富贵园25号楼（沈万三故居旁",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "952",
+            "name": "周庄富贵香草园大酒店",
+            "poiType": "酒店",
+            "point": {
+                "x": 120.86275736265,
+                "y": 31.117767423599
+            },
+            "tel": "",
+            "uid": "b6841941066980e20f0e6b2e",
+            "zip": ""
+        }, {
+            "addr": "苏州市昆山市全福路121号周庄古镇景区内",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "837",
+            "name": "财神居",
+            "poiType": "旅游景点",
+            "point": {
+                "x": 120.86450007534,
+                "y": 31.11833935799
+            },
+            "tel": "",
+            "uid": "78447e230038e559eb56fa67",
+            "zip": ""
+        }, {
+            "addr": "苏州市昆山市全福路121号周庄古镇景区内",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "802",
+            "name": "周庄古镇景区-游览售票处",
+            "poiType": "生活服务",
+            "point": {
+                "x": 120.86463482117,
+                "y": 31.118061120072
+            },
+            "tel": "",
+            "uid": "5056ad271eb4fcbafa0cad2e",
+            "zip": ""
+        }, {
+            "addr": "苏州市昆山市周庄镇富贵园周庄欢乐世界内",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "761",
+            "name": "周庄欢乐世界-生态区",
+            "poiType": "旅游景点",
+            "point": {
+                "x": 120.86571278778,
+                "y": 31.118540307085
+            },
+            "tel": "",
+            "uid": "b4da802eda4d2234ad0457fd",
+            "zip": ""
+        }, {
+            "addr": "苏州市昆山市周庄镇富贵园周庄欢乐世界内",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "872",
+            "name": "大南瓜",
+            "poiType": "旅游景点",
+            "point": {
+                "x": 120.86527261808,
+                "y": 31.119336370431
+            },
+            "tel": "",
+            "uid": "cdadf430924c6285246e98b7",
+            "zip": ""
+        }, {
+            "addr": "周庄全功路南湖秋月附近",
+            "cp": "NavInfo",
+            "direction": "东南",
+            "distance": "932",
+            "name": "670pub湖浜店",
+            "poiType": "美食",
+            "point": {
+                "x": 120.86275736265,
+                "y": 31.117450539532
+            },
+            "tel": "",
+            "uid": "fcc54646058e96bf33169b06",
+            "zip": ""
+        }],
+        "poiRegions": [],
+        "sematic_description": "周庄的驿站东南986米",
+        "cityCode": 289
+    }
+}

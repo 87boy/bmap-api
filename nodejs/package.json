@@ -1,0 +1,23 @@
+{
+  "name": "bmap-api",
+  "version": "1.0.0",
+  "description": "call Baidu Map JavaScript API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/87boy/bmap-api.git"
+  },
+  "author": "Bin Zhang",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/87boy/bmap-api/issues"
+  },
+  "homepage": "https://github.com/87boy/bmap-api",
+  "dependencies": {
+    "express": "^4.11.2",
+    "mysql": "^2.5.4"
+  }
+}

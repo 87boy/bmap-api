@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: "微软雅黑";
+        font-size: 14px;
+    }
+    #allmap {
+        width: 100%;
+        height: 300px;
+    }
+    </style>
+    <!--
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+-->
+    <script type="text/javascript" src="<?=base_url().'js/jquery-1.11.2.min.js'?>"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=8iPBLiCFtTvGiQZIrDFYN1Nl"></script>
+    <title>逆地址解析</title>
+</head>
+
+<body>
+    <div id="allmap"></div>
+    <p>点击地图展示详细地址</p>
+</body>
+
+</html>
+<script type="text/javascript">
+// 百度地图API功能
+var map = new BMap.Map("allmap");
+// var point = new BMap.Point(116.331398, 39.897445);
+// map.centerAndZoom(point, 12);
+map.centerAndZoom("上海");
+var geoc = new BMap.Geocoder();
+
+// map.addEventListener("click", function(e) {
+//     var pt = e.point;
+//     geoc.getLocation(pt, function(rs) {
+//         console.log(rs);
+//         var addComp = rs.addressComponents;
+//         console.log(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+//     });
+// });
+
+var id = 1;
+//4319341
+while (id < 1000) {
+    //console.log(id);
+    $.ajax({
+        url: "get?id=" + id,
+        type: "get",
+        //data: id,
+        //datatype: "json",
+        timeout: 60000,
+        success: function(data, textStatus) {
+            console.log(id + " get success");
+            //console.log(data);
+            //record = data;
+            if (data.length > 20) {
+                //record = JSON.parse(data.substring(13,data.length-7));
+                //console.log(record);
+
+                // var re = /({)(.+)(})/;
+                // var str = 'string(199) "{"id":"1","latitude":"26.60044","longitude":"101.60735","blatitude":"26.602810440693","blongitude":"101.615244804960","address":null,"business":null,"uid_list":null,"title_list":null,"tag_list":null}"\nNULL';
+                // var m;
+
+                // while ((m = re.exec(str)) != null) {
+                //     if (m.index === re.lastIndex) {
+                //         re.lastIndex++;
+                //     }
+                //     // View your result using the m-variable.
+                //     // eg m[0] etc.
+                // }
+
+                var regex_rst = data.match(/({)(.+)(})/);
+                var record_old = JSON.parse(regex_rst[0]);
+                //console.log(record_old);
+
+                if ((record_old.blongitude) && (record_old.blatitude) && (!record_old.address)) {
+                    var record_new = record_old;
+                    var pt = new BMap.Point(record_new.blongitude, record_new.blatitude);
+                    geoc.getLocation(pt, function(rs) {
+                        //console.log(rs);
+                        record_new.address = rs.address;
+                        record_new.business = rs.business;
+                        var pois = rs.surroundingPois;
+                        for (var idx = 0; idx < pois.length; idx++) {
+                            if (idx == 0) {
+                                record_new.uid_list = pois[idx].uid + ',';
+                                record_new.title_list = pois[idx].title + ',';
+                                record_new.tag_list = pois[idx].xi + ',';
+                            } else if (idx < pois.length - 1) {
+                                record_new.uid_list += pois[idx].uid + ',';
+                                record_new.title_list += pois[idx].title + ',';
+                                record_new.tag_list += pois[idx].xi + ',';
+                            } else {
+                                record_new.uid_list += pois[idx].uid;
+                                record_new.title_list += pois[idx].title;
+                                record_new.tag_list += pois[idx].xi;
+                            }
+                            var poi = new Object();
+                            poi.uid = pois[idx].uid;
+                            poi.title = pois[idx].title;
+                            poi.address = pois[idx].address;
+                            poi.city = pois[idx].city;
+                            poi.latitude = pois[idx].point.lat;
+                            poi.longitude = pois[idx].point.lng;
+                            poi.phoneNumber = pois[idx].phoneNumber;
+                            poi.postcode = pois[idx].postcode;
+                            poi.type = pois[idx].type;
+                            poi.tags = pois[idx].xi;
+                            $.ajax({
+                                url: "insert_poi",
+                                type: "post",
+                                data: poi,
+                                timeout: 60000,
+                                success: function(data, textStatus) {
+                                    console.log(idx + " insert_poi success");
+                                    //console.log(data);
+                                },
+                                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                    console.log(idx + " insert_poi fail");
+                                    // console.log("Error:Ajax_Content_Load " + errorThrown);
+                                    // console.log("XMLHttpRequest.status: " + XMLHttpRequest.status);
+                                    // console.log("XMLHttpRequest.readyState: " + XMLHttpRequest.readyState);
+                                    // console.log("textStatus: " + textStatus);
+                                }
+                            }); // end of insert_poi
+                        }
+                        //console.log(record_new);
+                        $.ajax({
+                            url: "update_point",
+                            type: "post",
+                            data: record_new,
+                            timeout: 60000,
+                            success: function(data, textStatus) {
+                                console.log(id + "update_point success");
+                                //console.log(data);
+                            },
+                            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                                console.log(id + " update_point fail");
+                                // console.log("Error:Ajax_Content_Load " + errorThrown);
+                                // console.log("XMLHttpRequest.status: " + XMLHttpRequest.status);
+                                // console.log("XMLHttpRequest.readyState: " + XMLHttpRequest.readyState);
+                                // console.log("textStatus: " + textStatus);
+                            }
+                        }); // end of update_point
+                    }); // end of getLocation
+                }
+            }
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log(id + " get fail");
+            // console.log("Error:Ajax_Content_Load " + errorThrown);
+            // console.log("XMLHttpRequest.status: " + XMLHttpRequest.status);
+            // console.log("XMLHttpRequest.readyState: " + XMLHttpRequest.readyState);
+            // console.log("textStatus: " + textStatus);
+        }
+    }); // end of get
+
+    id++;
+}
+</script>
